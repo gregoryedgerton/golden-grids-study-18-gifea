@@ -2,7 +2,7 @@
 // "add this study to the gallery" issue on the site's issue board, once.
 //   node captures/site-issue.cjs [YYYY-MM-DD] [--dry]
 // The date is the day of the study's first deploy (today, in local time, if left out). It reads
-// src/study.json, the icon's colours from public/favicon.svg and the face from index.html, so the
+// src/study.json, the release from the README's first line, the icon's colours from public/favicon.svg and the face from index.html, so the
 // issue carries what the site's `src/studies/NN-name.json` needs. Needs `gh`, signed in with
 // access to the site's repository (SITE_REPO, default gregoryedgerton/golden-grids-site).
 // It will not open a second issue for the same study. --dry prints the issue and opens nothing.
@@ -18,6 +18,8 @@ if (Number(study.number) === 0 || /[\[\]]/.test(`${brand} ${study.name}`)) { con
 const fills = [...new Set([...(fs.existsSync(path.join(root, 'public/favicon.svg')) ? read('public/favicon.svg') : '').matchAll(/fill="(#[0-9a-fA-F]{6})"/g)].map((x) => x[1].toLowerCase()))];
 const face = (/fonts\.googleapis\.com\/css2\?family=([^:&"]+)/.exec(read('index.html')) || [])[1];
 const pages = Object.values(study.pages || {}).join(', ');
+// The study's number on GIFcommit's master list, from the README's first line (GIFcommit00019 is release 19).
+const serial = (/^GIFcommit(\d{5})\s*$/m.exec(read('README.md').split('\n')[0]) || [])[1];
 const title = `Gallery: add ${brand} (Study ${study.number})`;
 const body = [
   `Study ${study.number}, ${brand} (after ${study.name}), was first published on ${day}. It is not in the gallery yet.`,
@@ -32,6 +34,7 @@ const body = [
   '| Field | Value |',
   '| --- | --- |',
   `| number | ${Number(study.number)} |`,
+  `| release | ${serial ? `${Number(serial)} (GIFcommit${serial} on GIFcommit's master list)` : 'its number on GIFcommit\'s master list, once it has one'} |`,
   `| published | ${day} |`,
   `| brand | ${brand} |`,
   `| reference | ${study.name} |`,

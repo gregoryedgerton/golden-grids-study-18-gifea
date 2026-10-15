@@ -4,7 +4,7 @@ import { Chips, Page } from "../lib/Page";
 import { GridBand, deal, type Cell } from "../bands/bands";
 import { BluePromo, FactStrip, FactTile, PhotoCard, PhotoTile, ProductCard } from "../lib/cards";
 import { Prose, ReadMore } from "../lib/modules";
-import { COLLECTIONS, PAGES, PIECES, REFERENCE, category, collection, collectionHref, piecesOfCollection, type CategoryId, type Collection, firstSentence } from "../content";
+import { COLLECTIONS, PAGES, PIECES, REFERENCE, category, collection, collectionHref, piecesOfCollection, type CategoryId, type Collection } from "../content";
 import "../styles.css";
 
 /**
@@ -26,7 +26,7 @@ function Overview() {
         <GridBand key={n} id={`collections-${i + 1}`} title={`${COLLECTIONS[n].name} and ${COLLECTIONS[n + 1].name}`} quiet variant={i} lead={i % 2 === 1}
           cells={[COLLECTIONS[n], COLLECTIONS[n + 1]].flatMap((c, j): Cell[] => [
             () => <PhotoTile k={c.photo} pos={c.pos} title={`${c.name}, ${c.years}`} href={collectionHref(c.id)} />,
-            () => <BluePromo tone={j === 0 ? "blue" : "ink"} kicker={`${piecesOfCollection(c.id).length} pieces · ${c.years}`} title={firstSentence(c.intro)} href={collectionHref(c.id)} label={`The ${c.name} collection`} />,
+            () => <BluePromo tone={j === 0 ? "blue" : "ink"} kicker={`${piecesOfCollection(c.id).length} pieces · ${c.years}`} title={c.tagline} href={collectionHref(c.id)} label={`The ${c.name} collection`} />,
           ])} />
       ))}
     </Page>

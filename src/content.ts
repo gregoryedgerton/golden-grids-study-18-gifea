@@ -554,45 +554,53 @@ export const MATERIALS: Record<MaterialId, { name: string; photo: string }> = {
   glass: { name: "Glass", photo: "wagenfeld" },
 };
 
-export interface Collection { id: CollectionId; name: string; years: string; photo: string; pos?: string; intro: string; more: string; tone: "blue" | "yellow" | "ink" | "grey" }
+export interface Collection { id: CollectionId; name: string; years: string; photo: string; pos?: string; tagline: string; intro: string; more: string; tone: "blue" | "yellow" | "ink" | "grey" }
 export const COLLECTIONS: Collection[] = [
   {
     id: "bentwood", name: "Bentwood", years: "1859–1905", photo: "rocker", tone: "ink",
+    tagline: "Steam, beech and a chair in six parts",
     intro: "Steam made the first furniture of industry. Michael Thonet bent solid beech in moulds, cut a chair down to a handful of parts and sent it out in pieces.",
     more: "The process needed no carving and could be worked by unskilled hands, and it made curves that cabinetmaking could not. Thonet took it into rocking chairs, and his rivals in Vienna, among them J. & J. Kohn, into adjustable armchairs drawn by the architects of the Secession.",
   },
   {
     id: "destijl", name: "De Stijl", years: "1917–1934", photo: "redblue-2", tone: "blue",
+    tagline: "Straight lines and primary colours",
     intro: "A Dutch movement of painters and architects that worked in straight lines and primary colours. Gerrit Rietveld, a cabinetmaker, built its ideas in wood.",
     more: "From the Red Blue chair, a drawing of crossing rails, to the Zig-Zag of four boards and the crate furniture sold as a kit, Rietveld kept reducing the chair to its planes and its joints.",
   },
   {
     id: "machine", name: "Machine age", years: "1924–1929", photo: "wassily", tone: "grey",
+    tagline: "Tube, glass and leather come home",
     intro: "In five years steel tube and bar, glass and leather came into the house. At the Bauhaus and in Paris, designers took the methods of industry to the chair, the table and the lamp.",
     more: "Breuer bent tube in the Bauhaus workshop; Mies and Stam took away the back legs; Perriand set a chaise longue on a stand; Eileen Gray made a table that adjusts to a bed; Wagenfeld's lamp showed its parts.",
   },
   {
     id: "factory", name: "Factory floor", years: "1932–1950", photo: "tolix", tone: "yellow",
+    tagline: "Made by engineers and metalworkers",
     intro: "Furniture made by engineers and metalworkers, or built from the catalogue: a lamp balanced on springs, a chair of galvanised sheet, a chair for warships and a cabinet of stock steel parts.",
     more: "None of these began as a statement of style. Each answered a working problem, light that stays where it is put, a chair that survives the weather or the sea, storage that can be ordered by the part, and each is made today.",
   },
   {
     id: "plywood", name: "Bent plywood", years: "1932–1956", photo: "paimio", tone: "ink",
+    tagline: "Wood in layers, bent and moulded",
     intro: "Layers of veneer glued and bent under pressure made a material that curves in more than one direction. From the Aaltos' sanatorium chair to the Eameses' lounge chair, plywood gave modern furniture curved form in wood.",
     more: "Alvar Aalto bent solid birch and laminated it; Breuer moved from aluminium to plywood in London; the Eameses moulded it in their apartment, then for the US Navy, then for Herman Miller; Sori Yanagi gave the technique a Japanese form.",
   },
   {
     id: "organic", name: "Organic modern", years: "1944–1956", photo: "tulip", tone: "blue",
+    tagline: "Shaped to the body",
     intro: "After the Museum of Modern Art's 1940 competition Organic Design in Home Furnishings, designers working in America shaped furniture to the body in fibreglass, cast aluminium, glass and paper.",
     more: "Saarinen made a shell to curl up in and then a chair on one stem; the Eameses put a plastic shell on rockers; Noguchi, a sculptor, made a table of two identical parts and lamps of paper made in Gifu.",
   },
   {
     id: "nordic", name: "Nordic", years: "1949–1958", photo: "series7-2", tone: "grey",
+    tagline: "Wood and metal, made to last",
     intro: "In Denmark and Sweden after the war, workshops and factories worked together on furniture of solid wood, plywood and spun metal, made for daily use and made to last.",
     more: "Wegner's chairs were made by hand in quantity; Jacobsen's were moulded by Fritz Hansen in the millions; Henningsen spent forty years on glare; String came out of a publisher's competition and the Lamino out of a small firm, and both are made today.",
   },
   {
     id: "spaceage", name: "Space age", years: "1960–1970", photo: "panton-2", tone: "yellow",
+    tagline: "Plastic in one piece",
     intro: "Plastics moulded in one piece, foam packed flat, and colour: in the 1960s furniture took shapes that no frame could make.",
     more: "Panton's chair needed seven years to reach production. Kartell made plastic a material for the home; Aarnio closed a sphere around the sitter; Pesce's foam left the factory in a flat box; Colombo put storage on castors.",
   },

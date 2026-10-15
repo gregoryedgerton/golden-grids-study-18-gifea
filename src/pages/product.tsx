@@ -74,7 +74,7 @@ function App() {
   const lineage = L ? L.pieces.map((id) => piece(id)!).sort(byYear) : [];
   const fact = (line: string, label: string, tone: "tile" | "blue" | "yellow" = "tile", spoken?: string): Cell => (_x, _k, flat) => (flat ? <FactStrip f={{ line, label, tone, spoken }} /> : <FactTile f={{ line, label, tone, spoken }} />);
   const gallery: Cell[] = [
-    ...photos.map((k, i): Cell => (x, key) => <PhotoCard k={k} title={i === 0 ? P.name : `${P.name}, a second photograph`} pos={i === 0 ? P.pos : undefined} x={x} slotKey={key} />),
+    ...photos.map((k, i): Cell => (x, key) => <PhotoCard k={k} title={i === 0 ? `${P.name}, photograph` : `${P.name}, a second photograph`} pos={i === 0 ? P.pos : undefined} x={x} slotKey={key} />),
     fact(dateOf(P), "Designed", "yellow"),
     fact(String(P.materials.length), P.materials.length === 1 ? "Material" : "Materials"),
   ];
