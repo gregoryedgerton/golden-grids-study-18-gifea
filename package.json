@@ -1,0 +1,24 @@
+{
+  "name": "golden-grids-study-18-ikea",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Golden Grids layout study 18: IKEA's home, products, department, category, product, collection and room pages and its style guide, rebuilt as stacked golden grids under the GIFea brand, as a catalogue of iconic furniture from 1859 to 1970 with photographs under open licences.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@gifcommit/golden-grids": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.3.0"
+  }
+}

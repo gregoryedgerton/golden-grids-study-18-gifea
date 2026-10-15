@@ -1,0 +1,102 @@
+{
+  "number": "18",
+  "name": "IKEA",
+  "brand": "GIFea",
+  "notice": "A layout study, not IKEA: its home, product, department, category, collection, room and style-guide pages rebuilt with Golden Grids as GIFea, a parody name, holding a catalogue of real furniture designs from 1859 to 1970. Not affiliated with IKEA; nothing here is for sale.",
+  "pages": {
+    "index": "Home",
+    "products": "Products",
+    "department": "Department",
+    "category": "Category",
+    "product": "Product",
+    "collection": "Collections",
+    "room": "Rooms",
+    "history": "Design history guide"
+  },
+  "summary": "The home page, the product departments, a department, a category, a product page, a series and a collection page, a room page and the style guide of ikea.com, rebuilt as stacked golden grids. The products are forty-one designs of furniture and lighting from Michael Thonet's No. 14 chair of 1859 to Joe Colombo's Boby trolley of 1970, each credited to the people who designed it and the firms that made it, and grouped by department, category, period and historic room.",
+  "reviewed": {
+    "date": "October 15, 2026",
+    "method": "Read in a desktop browser at 390, 820 and 1,440 pixels wide, signed out, with the text and the order of the headings taken from each page and screenshots kept only for the study's own reference. No screenshot, photograph or text of the reference is kept in the repository or published; its product names appear only to name the pages that were reviewed.",
+    "pages": [
+      {
+        "label": "Home page",
+        "url": "https://www.ikea.com/us/en/"
+      },
+      {
+        "label": "Products",
+        "url": "https://www.ikea.com/us/en/cat/products-products/"
+      },
+      {
+        "label": "A department: Sofas & armchairs",
+        "url": "https://www.ikea.com/us/en/cat/sofas-armchairs-700640/"
+      },
+      {
+        "label": "A category: Armchairs & accent chairs",
+        "url": "https://www.ikea.com/us/en/cat/armchairs-chaises-fu006/"
+      },
+      {
+        "label": "A product page: the POÄNG armchair",
+        "url": "https://www.ikea.com/us/en/p/poaeng-armchair-birch-veneer-knisa-light-beige-s59305928/"
+      },
+      {
+        "label": "A series page: POÄNG",
+        "url": "https://www.ikea.com/us/en/cat/poaeng-series-07472/"
+      },
+      {
+        "label": "A collection page: ALPTALL",
+        "url": "https://www.ikea.com/us/en/cat/alptall-collection-700810/"
+      },
+      {
+        "label": "A room page: Living room",
+        "url": "https://www.ikea.com/us/en/rooms/living-room/"
+      },
+      {
+        "label": "The style guide",
+        "url": "https://www.ikea.com/us/en/ideas/styles/"
+      }
+    ]
+  },
+  "real": [
+    "The shape of each page: the utility bar and header, the chips with small photographs, the mosaic of photographs with a line of type and an arrow, the blue promotion blocks, the product card (a name, a descriptor, a figure set large, a round blue button, coloured dots), the category page's filters with counts and its Compare boxes, the product page's breadcrumb, buy box, tabs, Get the look and More from the series, the room page's tiles and dotted photographs.",
+    "Every piece of furniture and lighting: its name, designer, date, materials and first maker, and its history, which is drawn from the Wikipedia article named on its page and written in the study's own words.",
+    "The historic rooms (the Villa Tugendhat, the Rietveld Schröder House and the Paimio Sanatorium) and what is said about them."
+  ],
+  "invented": [
+    "The name. GIFea is a parody name made for this study; it is not a shop and sells nothing. GIFea Family, the sign-up at the foot of every page, plays on the reference's loyalty programme and sends nothing.",
+    "The arrangement of the catalogue: its departments, categories, the eight collections (periods named by the study, such as Machine age and Factory floor) and the four lines of descent in the design history guide are the study's own grouping, not a historian's.",
+    "The year in place of a price, and the dots for who made a piece first and who makes it today. The current makers are as the study understood them in October 2026 and were not checked with each maker; where a first maker is not recorded, the page says so.",
+    "The badges, which state a count or a fact from the piece's history (\"50 million by 1930\", \"Sold flat\") in place of the reference's offers.",
+    "The list, the comparison and the search, which work on the study's own catalogue and keep what they hold in this browser; and the dark colour scheme, which the reference does not have."
+  ],
+  "assets": [
+    {
+      "what": "Photographs",
+      "source": "Wikimedia Commons: museum and amateur photographers, each credited on the page and beside the photograph when it is opened. Each shows the design it is set beside, or the room",
+      "url": "https://commons.wikimedia.org/",
+      "licence": "Creative Commons BY, BY-SA and CC0 licences, and the public domain, as recorded for each photograph"
+    },
+    {
+      "what": "Facts",
+      "source": "Wikipedia articles on each design, designer and building, listed on each page; written in the study's own words",
+      "url": "https://en.wikipedia.org/",
+      "licence": "the articles are under CC BY-SA 4.0; nothing is copied from them"
+    },
+    {
+      "what": "Icons",
+      "source": "Drawn for the study; none is the reference's"
+    },
+    {
+      "what": "Typeface",
+      "source": "Noto Sans, from Google Fonts, standing in for the reference's own typeface",
+      "url": "https://fonts.google.com/noto/specimen/Noto+Sans",
+      "licence": "SIL Open Font License"
+    },
+    {
+      "what": "Text",
+      "source": "The study's own"
+    }
+  ],
+  "owner": "IKEA or Inter IKEA Systems B.V., or by any of the designers, makers, museums or estates named here",
+  "repo": "https://github.com/gregoryedgerton/golden-grids-study-18-ikea",
+  "updated": "October 15, 2026"
+}
