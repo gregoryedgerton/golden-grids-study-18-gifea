@@ -21,7 +21,7 @@ services, prose, sign-up, credits); `src/lib/list.ts` Your list and Compare;
 `src/sources.ts` and `src/photos.json` the provenance. Read
 `docs/program/PROGRAM.md`, then `STUDY-BRIEF.md`, then `README.md`.
 
-Live at https://gregoryedgerton.github.io/golden-grids-study-18-ikea/;
+Live at https://gregoryedgerton.github.io/golden-grids-study-18-gifea/;
 pushing to `main` deploys.
 
 ## Rules that are not negotiable
@@ -342,3 +342,5 @@ or labels, even inert ones; personal-data fields beyond one email box that
 says nothing is sent; personal autofill tokens (`email`, `name`,
 `given-name`, `family-name`, `tel`, `postal-code`, `street-address`,
 `cc-*`); links to a real login or account page.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-18-ikea` to `golden-grids-study-18-gifea`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.

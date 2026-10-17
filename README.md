@@ -2,7 +2,7 @@ GIFcommit00019
 
 # Layout study — IKEA, as GIFea
 
-**Live:** [`https://gregoryedgerton.github.io/golden-grids-study-18-ikea/`](https://gregoryedgerton.github.io/golden-grids-study-18-ikea/)
+**Live:** [`https://gregoryedgerton.github.io/golden-grids-study-18-gifea/`](https://gregoryedgerton.github.io/golden-grids-study-18-gifea/)
 
 An unaffiliated layout study. It rebuilds the home page, the product
 departments, a department, a category, a product page, a series and a
@@ -214,3 +214,5 @@ NODE_PATH=<a node_modules with playwright> node captures/scan.cjs http://localho
 ```
 
 Pushing to `main` deploys to GitHub Pages.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-18-ikea` to `golden-grids-study-18-gifea`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.
