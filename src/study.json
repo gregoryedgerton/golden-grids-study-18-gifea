@@ -62,7 +62,7 @@
     "The historic rooms (the Villa Tugendhat, the Rietveld Schröder House and the Paimio Sanatorium) and what is said about them."
   ],
   "invented": [
-    "The name. GIFea is a parody name made for this study; it is not a shop and sells nothing. GIFea Family, the sign-up at the foot of every page, plays on the reference's loyalty programme and sends nothing.",
+    "The name. GIFea is a parody name made for this study; it is not a shop and sells nothing. GIFea Family, the email box at the foot of every page, plays on the reference's loyalty programme; it asks for nothing else and sends nothing.",
     "The arrangement of the catalogue: its departments, categories, the eight collections (periods named by the study, such as Machine age and Factory floor) and the four lines of descent in the design history guide are the study's own grouping, not a historian's.",
     "The year in place of a price, and the dots for who made a piece first and who makes it today. The current makers are as the study understood them in October 2026 and were not checked with each maker; where a first maker is not recorded, the page says so.",
     "The badges, which state a count or a fact from the piece's history (\"50 million by 1930\", \"Sold flat\") in place of the reference's offers.",
@@ -98,5 +98,5 @@
   ],
   "owner": "IKEA or Inter IKEA Systems B.V., or by any of the designers, makers, museums or estates named here",
   "repo": "https://github.com/gregoryedgerton/golden-grids-study-18-ikea",
-  "updated": "October 15, 2026"
+  "updated": "October 17, 2026"
 }

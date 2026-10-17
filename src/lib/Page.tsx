@@ -11,9 +11,10 @@ import { useFontsReady } from "./fonts";
 
 /**
  * The shell, after the reference's: a black utility bar, then the header (the
- * mark, the four ways in, a search field that suggests as it is typed, a
- * greeting and the reader's list), a row of chips with small photographs, a
- * breadcrumb, the page, the loyalty sign-up and a grey footer of lists. The
+ * mark, the four ways in, a search field that suggests as it is typed, and
+ * the reader's list; the reference's log-in greeting is left out, see
+ * CLAUDE.md), a row of chips with small photographs, a breadcrumb, the page,
+ * the GIFea Family email box and a grey footer of lists. The
  * reference's own items are shown for show; the study's pages are the links,
  * and the search and the list work on the study's own catalogue. Nothing in
  * the shell leaves for the reference: it is linked only from the notice and
@@ -25,7 +26,7 @@ function Search() {
   const hits = q.trim().length >= 2 ? search(q) : [];
   const go = () => { const t = q.trim(); if (t) location.href = `${PAGES.category}?q=${encodeURIComponent(t)}`; };
   return (
-    <form className="search" role="search" onSubmit={(e) => { e.preventDefault(); go(); }}>
+    <form className="search" role="search" autoComplete="off" onSubmit={(e) => { e.preventDefault(); go(); }}>
       <label className="visually-hidden" htmlFor={`${id}q`}>Search the catalogue</label>
       <span className="search__icon" aria-hidden="true"><Icon name="search" size={20} /></span>
       <input id={`${id}q`} type="search" placeholder="What are you looking for?" value={q} autoComplete="off" aria-describedby={`${id}n`} onChange={(e) => setQ(e.target.value)} />
@@ -119,7 +120,6 @@ export function Page({ current, source, crumbs, chips, children }: { current: st
           </nav>
           <Search />
           <div className="hacts">
-            <span className="hbtn hbtn--show"><span className="hbtn__icon"><Icon name="user" size={24} /></span><span className="hbtn__word">Hej! Log in or sign up</span></span>
             <ListButton />
           </div>
         </div>

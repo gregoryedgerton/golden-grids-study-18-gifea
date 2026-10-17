@@ -69,7 +69,7 @@ export function CompareBox({ p }: { p: Piece }) {
   const full = !on && ids.length >= 4;
   return (
     <label className={`comparebox${full ? " is-full" : ""}`}>
-      <input type="checkbox" checked={on} disabled={full} onChange={() => compare.toggle(p.id)} />
+      <input type="checkbox" autoComplete="off" checked={on} disabled={full} onChange={() => compare.toggle(p.id)} />
       <span>Compare<span className="visually-hidden"> {p.name}</span></span>
     </label>
   );

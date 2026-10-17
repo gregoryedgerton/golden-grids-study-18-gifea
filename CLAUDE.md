@@ -12,7 +12,7 @@ designs of furniture and lighting from 1859 to 1970. EIGHT pages (`index`,
 `history`), Vite entries with plain links; five take a query (`?p=`, `?c=`,
 `?d=`, `?m=`, `?q=`, `?r=`). `src/lib/Page.tsx` is the shell (utility bar,
 header with a suggesting search and Your list, chips, breadcrumb, GIFea Family
-sign-up, footer); `src/bands/bands.tsx` has `GridBand` and `deal`;
+email box, footer); `src/bands/bands.tsx` has `GridBand` and `deal`;
 `src/lib/cards.tsx` every kind of cell (product card, photo tile, pill tile,
 blue promotion, room photo with dots, fact tile and strip, square of type);
 `src/lib/modules.tsx` the flat modules (filter bar, compare tray, tabs,
@@ -314,3 +314,31 @@ opened in StackBlitz at `https://stackblitz.com/~/github.com/gregoryedgerton/gol
 - Do not append `?file=` to the `~/github.com` link; it made the IDE fail to
   start in testing. The classic `/github/` importer accepts `?file=` but waits
   on a WebSocket and can stall at "Cloning repo from GitHub".
+
+## Safe Browsing remediation (2026-10)
+
+On 2026-10-17 Google Safe Browsing flagged the whole origin
+gregoryedgerton.github.io as social engineering (pages that "try to trick
+visitors into sharing personal info"). The first trigger was a demo bank
+sign-in in Study 19; every study then lost anything that looks like
+collecting credentials or personal data. Nothing here ever sent anything; the
+scanner reads the appearance.
+
+**What changed**
+- Header: the greeting "Hej! Log in or sign up" and its person icon are gone
+  (`src/lib/Page.tsx`, with its `.hbtn--show` rules); the action row is the
+  Your list button alone, at every width.
+- GIFea Family (`FamilySignup`, `src/lib/modules.tsx`): the email box has
+  `autoComplete="off"` (it was `email`); the heading is "GIFea Family", not
+  "Join GIFea Family", the button says "Subscribe", not "Join now", and the
+  note says nothing is sent or stored; after Subscribe it says nothing was
+  sent.
+- The search form, the sort select and the Compare boxes carry
+  `autoComplete="off"`. Your list stays in the browser's local storage and is
+  sent nowhere.
+
+**Never bring back**: sign-in, log-in, sign-up or join-a-programme controls
+or labels, even inert ones; personal-data fields beyond one email box that
+says nothing is sent; personal autofill tokens (`email`, `name`,
+`given-name`, `family-name`, `tel`, `postal-code`, `street-address`,
+`cc-*`); links to a real login or account page.

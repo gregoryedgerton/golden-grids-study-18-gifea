@@ -7,7 +7,11 @@ import { compare } from "./list";
 
 /** Flat modules: bars, lists, tables and forms. They are not grids because their content has no hierarchy to descend. */
 
-/** The loyalty sign-up that ends every page. It sends nothing and says so. */
+/**
+ * The email box that ends every page, after the reference's loyalty
+ * programme. One field, autofill off; it sends nothing and says so (Safe
+ * Browsing remediation, see CLAUDE.md).
+ */
 export function FamilySignup() {
   const [sent, setSent] = useState(false);
   const id = useId();
@@ -15,14 +19,14 @@ export function FamilySignup() {
     <section className="family" aria-labelledby={`${id}t`}>
       <div className="wrap family__row">
         <div className="family__text">
-          <h2 id={`${id}t`}>Join GIFea Family</h2>
-          <p>A note when a collection is added to the archive, and early word of new rooms. Free to join.</p>
+          <h2 id={`${id}t`}>GIFea Family</h2>
+          <p>A note by email when a collection is added to the archive, and early word of new rooms.</p>
         </div>
-        <form className="family__form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
+        <form className="family__form" autoComplete="off" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
           <label className="visually-hidden" htmlFor={`${id}e`}>Email address</label>
-          <input id={`${id}e`} type="email" required placeholder="Email address" autoComplete="email" />
-          <button type="submit" className="btn btn--dark">Join now</button>
-          <p className="note" role="status">{sent ? "Nothing was sent: this is a layout study, and there is no list." : "A form that sends nothing."}</p>
+          <input id={`${id}e`} type="email" required placeholder="Email address" autoComplete="off" />
+          <button type="submit" className="btn btn--dark">Subscribe</button>
+          <p className="note" role="status">{sent ? "Nothing was sent: this is a layout study, and there is no list." : "Nothing you type here is sent or stored."}</p>
         </form>
       </div>
     </section>
@@ -64,7 +68,7 @@ export function FilterBar({ pieces, cols, toggleCol, mats, toggleMat, sort, setS
             {(Object.keys(MATERIALS) as MaterialId[]).filter((m) => matN(m)).map((m) => <button key={m} type="button" className="fchip fchip--mat" aria-pressed={mats.includes(m)} onClick={() => toggleMat(m)}><span className={`swatch swatch--${m}`} aria-hidden="true" />{MATERIALS[m].name} <span className="fchip__n">({matN(m)})</span></button>)}
           </div>
           <label className="sortby"><span>Sort</span>
-            <select value={sort} onChange={(e) => setSort(e.target.value as Sort)}><option value="old">Oldest first</option><option value="new">Newest first</option><option value="name">Name, A to Z</option></select>
+            <select autoComplete="off" value={sort} onChange={(e) => setSort(e.target.value as Sort)}><option value="old">Oldest first</option><option value="new">Newest first</option><option value="name">Name, A to Z</option></select>
           </label>
           <p className="filterbar__count" role="status" aria-live="polite">{count} {count === 1 ? "item" : "items"}</p>
           {any && <button type="button" className="textbtn" onClick={clear}>Clear filters</button>}
